@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/kisal-dv/static/css/main.8f59d754.css",
+    "main.js": "/kisal-dv/static/js/main.5726d982.js",
+    "static/media/Profile.png": "/kisal-dv/static/media/Profile.7137a545cd36b03bd527.png",
+    "index.html": "/kisal-dv/index.html",
+    "main.8f59d754.css.map": "/kisal-dv/static/css/main.8f59d754.css.map",
+    "main.5726d982.js.map": "/kisal-dv/static/js/main.5726d982.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8f59d754.css",
+    "static/js/main.5726d982.js"
+  ]
+}
