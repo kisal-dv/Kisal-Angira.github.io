@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Kisal-Angira.github.io/static/css/main.8f59d754.css",
-    "main.js": "/Kisal-Angira.github.io/static/js/main.e3bf1f86.js",
+    "main.js": "/Kisal-Angira.github.io/static/js/main.248937a6.js",
     "static/media/Profile.png": "/Kisal-Angira.github.io/static/media/Profile.7137a545cd36b03bd527.png",
     "index.html": "/Kisal-Angira.github.io/index.html",
     "main.8f59d754.css.map": "/Kisal-Angira.github.io/static/css/main.8f59d754.css.map",
-    "main.e3bf1f86.js.map": "/Kisal-Angira.github.io/static/js/main.e3bf1f86.js.map"
+    "main.248937a6.js.map": "/Kisal-Angira.github.io/static/js/main.248937a6.js.map"
   },
   "entrypoints": [
     "static/css/main.8f59d754.css",
-    "static/js/main.e3bf1f86.js"
+    "static/js/main.248937a6.js"
   ]
 }
