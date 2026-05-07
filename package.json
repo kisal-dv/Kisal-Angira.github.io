@@ -1,10 +1,10 @@
 {
-  "homepage": "https://kavindu-dilshan.github.io",
-  "name": "kavindu-dilshan-portfolio",
+  "name": "kisal-angira-portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kisal-dv.github.io/Kisal-Angira.github.io/",
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
+    "@emailjs/browser": "^3.12.1",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
@@ -26,11 +26,12 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   },
   "eslintConfig": {
     "extends": [
@@ -49,8 +50,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
   }
 }

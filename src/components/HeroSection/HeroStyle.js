@@ -185,15 +185,18 @@ export const ResumeButton = styled.a`
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
-    width: 95%;
-    max-width: 250px;
-    text-align: center;
-    padding: 16px 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  padding: clamp(10px, 1.6vw, 16px) clamp(16px, 3.2vw, 28px);
     color: ${({ theme }) => theme.white};
-    border-radius: 100px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: clamp(15px, 1.6vw, 20px);
+  font-weight: 600;
+  white-space: nowrap;
     transition: all 0.2s ease-in-out !important;
     background: #4285F4;
     background: linear-gradient(225deg, #083c91, #4285F4);
@@ -206,8 +209,8 @@ export const ResumeButton = styled.a`
     }    
     
     @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
+    padding: clamp(10px, 2.2vw, 12px) clamp(14px, 6vw, 20px);
+    font-size: clamp(14px, 2.6vw, 18px);
     } 
 `;
 

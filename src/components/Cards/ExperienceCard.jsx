@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 
 const Document = styled.img`
@@ -80,7 +80,9 @@ const Top = styled.div`
 
 const Image = styled.img`
     height: 50px;
-    background-color: #000;
+    width: 70px;
+    background-color: transparent;
+    object-fit: contain;
     border-radius: 10px;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
@@ -151,7 +153,7 @@ const ExperienceCard = ({ experience }) => {
     return (
         <Card>
             <Top>
-                <Image src={experience.img} />
+                <Image src={experience.img} loading="lazy" />
                 <Body>
                     <Role>{experience.role}</Role>
                     <Company>{experience.company}</Company>
@@ -186,4 +188,4 @@ const ExperienceCard = ({ experience }) => {
     )
 }
 
-export default ExperienceCard
+export default memo(ExperienceCard)

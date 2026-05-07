@@ -7,14 +7,30 @@ import { useTheme } from 'styled-components';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+  const [showNav, setShowNav] = React.useState(true);
+  const lastScroll = React.useRef(window.scrollY);
+  const theme = useTheme();
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll.current && currentScroll > 80) {
+        setShowNav(false); // Hide navbar
+      } else {
+        setShowNav(true); // Show navbar
+      }
+      lastScroll.current = currentScroll;
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  
+
   return (
-    <Nav>
+    <Nav className={showNav ? 'navbar-visible' : 'navbar-hidden'}>
       <NavbarContainer>
         <NavLogo to='/'>
           <div style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }} onClick={scrollToTop}>

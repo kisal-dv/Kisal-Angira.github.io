@@ -51,73 +51,66 @@ export const Desc = styled.div`
 
 const SkillsContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
   margin-top: 30px;
-  gap: 30px;
-  justify-content: center;
+  align-items: stretch;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const Skill = styled.div`
   width: 100%;
-  max-width: 530px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 0.1px solid ${({ theme }) => theme.primary};
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-
-
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 18px;
+  padding: 28px 32px;
+  border: 1px solid rgba(64,133,255,0.18);
+  box-shadow: 0 6px 30px rgba(3,28,55,0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 `
 
 const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 700;
   color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 20px;
+  margin: 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
 `
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-top: 12px;
 `
 
 const SkillItem = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  font-size: 14px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary + 90};
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.02);
   border-radius: 12px;
-  padding: 12px 16px;
+  padding: 10px 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
+  gap: 10px;
+  min-width: 110px;
 `
 
 const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
 `
 
 
@@ -128,19 +121,19 @@ const Skills = () => {
         <Title>Skills</Title>
         <Desc>Here are some of my skills over the last few years.</Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
-                    {item.name}
-                  </SkillItem>
+                {skills.map((skill, idx) => (
+                  <Skill key={idx}>
+                    <SkillTitle>{skill.title}</SkillTitle>
+                    <SkillList>
+                      {skill.skills.map((item, i) => (
+                        <SkillItem key={i}>
+                          <SkillImage src={item.image}/>
+                          {item.name}
+                        </SkillItem>
+                      ))}
+                    </SkillList>
+                  </Skill>
                 ))}
-              </SkillList>
-            </Skill>
-          ))}
 
         </SkillsContainer>
       </Wrapper>

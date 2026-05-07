@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import styled from 'styled-components'
 
 
@@ -38,12 +38,24 @@ const Card = styled.div`
     }
 `
 
-const Image = styled.img`
+const ImageWrapper = styled.div`
     width: 100%;
     height: 180px;
-    background-color: ${({ theme }) => theme.white};
     border-radius: 10px;
+    background-color: ${({ theme }) => theme.white};
     box-shadow: 0 0 16px 2px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+`
+
+const ImageEl = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 `
 
 const Tags = styled.div`
@@ -115,24 +127,28 @@ const Members = styled.div`
     display: flex;
     align-items: center;
     padding-left: 10px;
+    gap: 8px;
 `
 const Avatar = styled.img`
-    width: 38px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    margin-left: -10px;
-    background-color: ${({ theme }) => theme.white};
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    border: 3px solid ${({ theme }) => theme.card};
+    background-color: transparent;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+    border: 2px solid rgba(255,255,255,0.06);
+    object-fit: cover;
 `
+ 
 
 const ProjectCards = ({project,setOpenModal}) => {
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Image src={project.image}/>
+            <Card onClick={() => setOpenModal({state: true, project: project})}>
+            <ImageWrapper>
+                {project.image && <ImageEl src={project.image} alt={project.title || ''} loading="lazy" />}
+            </ImageWrapper>
             <Tags>
                 {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
+                <Tag key={index}>{tag}</Tag>
                 ))}
             </Tags>
             <Details>
@@ -140,14 +156,16 @@ const ProjectCards = ({project,setOpenModal}) => {
                 <Date>{project.date}</Date>
                 <Description>{project.description}</Description>
             </Details>
-            <Members>
-                {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
-                ))}
-            </Members>
+            {project.member && project.member.filter(m => m.img && !m.img.includes('placeholder.com')).length > 0 && (
+                <Members>
+                    {project.member.filter(m => m.img && !m.img.includes('placeholder.com')).map((member) => (
+                        <Avatar key={member.github || member.name} src={member.img} loading="lazy" />
+                    ))}
+                </Members>
+            )}
             {/* <Button>View Project</Button> */}
         </Card>
     )
 }
 
-export default ProjectCards
+export default memo(ProjectCards)

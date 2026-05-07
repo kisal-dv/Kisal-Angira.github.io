@@ -2,18 +2,27 @@ import { Link as LinkR } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Nav = styled.div`
-    background-color: ${({ theme }) => theme.bg};
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    @media (max-width: 960px) {
-        trastion: 0.8s all ease;
-    }
+  background-color: ${({ theme }) => theme.bg};
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
+  &.navbar-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  &.navbar-visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  @media (max-width: 960px) {
+    transition: 0.8s all ease;
+  }
 `;
 export const NavbarContainer = styled.div`
   display: flex;

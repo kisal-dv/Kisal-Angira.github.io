@@ -1,13 +1,35 @@
 import styled from 'styled-components'
 import React from 'react';
-import { FaCode, FaPaintBrush, FaAndroid, FaDesktop } from 'react-icons/fa';
+import { FaCode, FaCogs, FaCloud, FaTerminal } from 'react-icons/fa';
+import { SiDocker } from 'react-icons/si';
 import './Services.css';
 
 const servicesData = [
-  { icon: <FaCode />, title: 'Web Development', description: 'Create stunning websites with cutting-edge technologies for an immersive online presence.' },
-  { icon: <FaAndroid />, title: 'Android Development', description: 'Shape the future of mobile applications with intuitive and feature-rich Android development.' },
-  { icon: <FaDesktop />, title: 'UI/UX Design', description: 'Craft visually appealing and user-friendly interfaces for an enhanced digital experience.' },
-  { icon: <FaPaintBrush />, title: 'Graphic Design', description: 'Express ideas through visually compelling designs, from logos to impactful marketing materials.' },
+    {
+        icon: <FaCode />,
+        title: 'Web Development',
+        description: 'Build responsive, fast, and modern websites using cutting-edge technologies and best practices to deliver exceptional digital experiences.'
+    },
+    {
+        icon: <FaCogs />,
+        title: 'DevOps & CI/CD',
+        description: 'Implement CI/CD pipelines, automate workflows, and streamline deployments for faster, reliable, and cost-effective delivery.'
+    },
+    {
+        icon: <FaCloud />,
+        title: 'Cloud & Infrastructure',
+        description: 'Design, deploy, and manage scalable cloud solutions using AWS and modern infrastructure practices for high availability and performance.'
+    },
+    {
+        icon: <SiDocker />,
+        title: 'Containerization',
+        description: 'Containerize applications using Docker and manage consistent environments for seamless development and deployment.'
+    },
+    {
+        icon: <FaTerminal />,
+        title: 'Automation & Scripting',
+        description: 'Automate tasks, reduce manual effort, and improve efficiency using scripting and Infrastructure as Code (IaC) practices.'
+    },
 ];
 
 export const Title = styled.div`

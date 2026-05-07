@@ -28,7 +28,35 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <div id="root">
+      <!-- Fallback/static content: Projects list
+           This will be visible when opening index.html directly or when JS hasn't mounted.
+           Note: React will replace the contents of #root when the app mounts. -->
+      <section id="projects" style="max-width:900px;margin:32px auto;padding:8px;font-family:Arial,Helvetica,sans-serif;">
+        <h1 style="margin:0 0 12px 0;font-size:1.5rem;">Projects</h1>
+
+        <!-- New project card: Cloud-Based DevOps Pipeline Application -->
+        <article id="project-cloud-devops" class="project-card" style="margin:12px 0;padding:16px;border-radius:8px;background:#f8f9fb;border:1px solid #e6e9ee;">
+          <h2 style="margin:0 0 8px 0;font-size:1.25rem;">Cloud-Based DevOps Pipeline Application</h2>
+          <p style="margin:0 0 12px 0;color:#333;">
+            Developed a full‑stack cloud‑deployed application using React, Spring Boot, Docker, GitHub Actions, and Railway. Features CI/CD pipeline automation, containerized deployment, REST API communication, and GitHub-integrated continuous deployment workflows.
+          </p>
+          <ul style="margin:0 0 12px 20px;color:#333;">
+            <li>Frontend: React</li>
+            <li>Backend: Spring Boot (Java)</li>
+            <li>Containerization: Docker</li>
+            <li>CI/CD: GitHub Actions (automated build/test/publish)</li>
+            <li>Deployment: Railway (cloud-hosted containers)</li>
+          </ul>
+          <p style="margin:0;">
+            <a href="https://github.com/USERNAME/REPO" target="_blank" rel="noopener" style="color:#0366d6;text-decoration:none;margin-right:12px;">Repository</a>
+            <a href="https://your-deployment-url" target="_blank" rel="noopener" style="color:#0366d6;text-decoration:none;">Live Demo</a>
+          </p>
+        </article>
+      </section>
+    </div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

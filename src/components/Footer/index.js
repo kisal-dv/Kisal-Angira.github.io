@@ -102,7 +102,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="display"><FaInstagram /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2025 Kisal Angira. All rights Reserved.
+          &copy; 2026 Kisal Angira. All rights Reserved.
         </Copyright>
 
       </FooterWrapper>
