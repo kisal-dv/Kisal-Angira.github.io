@@ -26,7 +26,7 @@ description: (
   </>
 ),
   github: "https://github.com/kisal-dv",
-  resume: "https://drive.google.com/file/d/1oHzdseoLokdgaHy8CYPfhXeSscAvyat_/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1vVq1JoOzmN3h_O8ZmgJL9SRaUAJUbJmY/view?usp=drive_link",
   linkedin: "https://www.linkedin.com/in/kisal-angira/",
   facebook: "https://www.facebook.com/",
   behance: "https://www.behance.net/kisalangira",
