@@ -7,14 +7,12 @@ const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState('all');
   const [visibleProjects, setVisibleProjects] = useState(6); // State to control the number of visible projects
 
-  // Filter projects based on the selected category
   const filteredProjects = toggle === 'all' ? projects : projects.filter((item) => item.category === toggle);
 
-  // Show only the number of projects specified by visibleProjects
   const displayedProjects = filteredProjects.slice(0, visibleProjects);
 
   const handleShowMore = () => {
-    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 6); // Increase the number of visible projects by 6
+    setVisibleProjects((prevVisibleProjects) => prevVisibleProjects + 6);
   };
 
   return (

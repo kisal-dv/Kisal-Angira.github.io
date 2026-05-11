@@ -28,11 +28,9 @@ description: (
   github: "https://github.com/kisal-dv",
   resume: "https://drive.google.com/file/d/1oHzdseoLokdgaHy8CYPfhXeSscAvyat_/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/kisal-angira/",
- // twitter: "https://x.com/AngiraKisal",
- // insta: "https://www.instagram.com/",
   facebook: "https://www.facebook.com/",
   behance: "https://www.behance.net/kisalangira",
- // dribble: "https://dribbble.com/kavindu-dilshan",
+  
 };
 
 export const skills = [
@@ -152,7 +150,7 @@ export const projects = [
     id: 4,
     title: "Cloud-Based DevOps Pipeline Application",
     date: "2026",
-    description: "Designed and implemented an automated CI/CD pipeline using Docker, Jenkins, and Terraform to build, test, and deploy containerized applications to AWS. Includes automated testing, infrastructure as code, and monitoring integration.",
+    description: "Developed a full-stack cloud-deployed application using React, Spring Boot, Docker, GitHub Actions, and Railway, featuring CI/CD pipeline automation, containerized deployment, REST API communication, and GitHub-integrated continuous deployment workflows.",
     image: require('../images/devopspipeline.jpg'),
     tags: ["Docker", "CI/CD", "Jenkins", "Terraform", "AWS"],
     category: "web app",

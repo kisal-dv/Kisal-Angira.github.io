@@ -24,7 +24,6 @@ body {
   color: #222;
 }
 
-/* Glassmorphism base class for cards, nav, etc. */
 .glass {
   background: rgba(255, 255, 255, 0.35);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
@@ -34,24 +33,18 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-/* width */
+/* Custom scrollbar styles */
 ::-webkit-scrollbar {
     width: 4px;
     height: 80px;
   }
-  
-  /* Track */
   ::-webkit-scrollbar-track {
     background:#222A35;
   }
-  
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #575C66;
     border-radius: 6px;
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #626970;
   }

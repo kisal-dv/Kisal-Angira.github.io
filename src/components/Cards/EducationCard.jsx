@@ -2,7 +2,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 
-// Glassy Description for iOS look
 const Description = styled.div`
     width: 100%;
     font-size: 15px;

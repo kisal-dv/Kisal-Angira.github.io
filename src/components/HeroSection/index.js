@@ -7,18 +7,14 @@ import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 
 const HeroSection = () => {
-    // Fake view counter logic
-    const [views, setViews] = useState(() => {
-        // Start at a random number between 1000 and 3000
-        return Math.floor(Math.random() * 2000) + 1000;
-    });
+    // Simulated view counter: starts random; increments every 3 minutes
+    const [views, setViews] = useState(() => Math.floor(Math.random() * 2000) + 1000);
     const intervalRef = useRef();
 
     useEffect(() => {
-        // 20 views per hour = 1 view every 3 minutes (180,000 ms)
         intervalRef.current = setInterval(() => {
             setViews(v => v + 1);
-        }, 180000);
+        }, 180000); // increment every 3 minutes
         return () => clearInterval(intervalRef.current);
     }, []);
 
