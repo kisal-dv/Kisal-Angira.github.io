@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Kisal-Angira.github.io/static/css/main.7ebf414e.css",
-    "main.js": "/Kisal-Angira.github.io/static/js/main.3d927402.js",
+    "main.js": "/Kisal-Angira.github.io/static/js/main.c1fa52f9.js",
     "static/css/334.a1aebb65.chunk.css": "/Kisal-Angira.github.io/static/css/334.a1aebb65.chunk.css",
     "static/js/334.d40a9a13.chunk.js": "/Kisal-Angira.github.io/static/js/334.d40a9a13.chunk.js",
     "static/js/699.eb3ca3d9.chunk.js": "/Kisal-Angira.github.io/static/js/699.eb3ca3d9.chunk.js",
@@ -22,7 +22,7 @@
     "static/media/devopspipeline.jpg": "/Kisal-Angira.github.io/static/media/devopspipeline.5a58603c6d86d109a1d1.jpg",
     "index.html": "/Kisal-Angira.github.io/index.html",
     "main.7ebf414e.css.map": "/Kisal-Angira.github.io/static/css/main.7ebf414e.css.map",
-    "main.3d927402.js.map": "/Kisal-Angira.github.io/static/js/main.3d927402.js.map",
+    "main.c1fa52f9.js.map": "/Kisal-Angira.github.io/static/js/main.c1fa52f9.js.map",
     "334.a1aebb65.chunk.css.map": "/Kisal-Angira.github.io/static/css/334.a1aebb65.chunk.css.map",
     "334.d40a9a13.chunk.js.map": "/Kisal-Angira.github.io/static/js/334.d40a9a13.chunk.js.map",
     "699.eb3ca3d9.chunk.js.map": "/Kisal-Angira.github.io/static/js/699.eb3ca3d9.chunk.js.map",
@@ -40,6 +40,6 @@
   },
   "entrypoints": [
     "static/css/main.7ebf414e.css",
-    "static/js/main.3d927402.js"
+    "static/js/main.c1fa52f9.js"
   ]
 }
